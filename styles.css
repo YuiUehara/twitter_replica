@@ -1,0 +1,494 @@
+h1,
+h2 {
+  font-size: 19px;
+  line-height: 1rem;
+}
+
+h1 {
+  font-size:2rem;
+  /*padding: 0 1rem;*/
+}
+
+.gray {
+  color: #8899a6;
+}
+
+.bold {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+body {
+  background-color: #15202b;
+  color: white;
+  display: flex;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+@media (max-width: 988px) {
+  .over988 {
+    display: none;
+  }
+}
+@media (max-width: 1125px) {
+  .over1125{
+    display: none;
+  }
+}
+
+@media (max-width: 1266px) {
+  .over1266 {
+    display: none;
+  }
+}
+
+.under1265 {
+  display: none;
+}
+
+@media (max-width: 1265px) {
+  .under1265 {
+    display: block;
+  }
+}
+
+body > * {
+  flex-direction: row; /* 中身が左から右へ整列 */
+}
+
+.menu_area {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.menu_in {
+  padding:0 1rem;
+  /*height: 100%;*/
+}
+
+body header {
+  align-items: flex-start;
+  /*
+  display: flex;
+  flex-direction: column;
+  */
+  justify-content: space-between;
+  padding: 0.4rem 0.4rem;
+  position: relative;
+  /* width: 275px; */
+  /* width: 203.156px; */
+}
+
+@media (max-width: 1266px) {
+body header {
+  width: 88px;
+}
+}
+
+body header .menu nav ul {
+  padding-left: 0;
+}
+
+body header .menu nav ul li {
+  list-style-type: none;
+  /*padding:0.6rem 1rem;*/
+  padding:0.6rem 0;
+}
+
+body header .menu nav ul li a {
+  align-items: center;
+  color: white;
+  font-size: 19px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+body header .menu nav ul li a .menu_icon{
+  display:inline;
+  font-size:1.8rem;
+  /* padding:0 1rem; */
+  padding-right: 1rem;
+}
+
+body header .menu nav ul li a:hover {
+  color: #1da1f2;
+}
+
+body header .menu .menu_in {
+  width: 275px;
+  height: 100%;
+}
+
+body header .tweet_modal {
+  /*padding: 0 1.2rem;*/
+}
+
+body header .tweet_modal > * {
+  /* ツイートするモーダル作ったらここにcss作る */
+  background-color: #1da1f2;
+  border-color: transparent;
+  border-radius: 24px;
+  margin: 15px 0;
+  padding: 0.8rem 3.2rem;
+  width: 120px;
+}
+
+@media (max-width: 1266px) {
+  body header .tweet_modal > * {
+    border-radius: 50px;
+    padding: 0.8rem 1.4rem;
+    width: 5px;
+  }
+}
+
+body header .tweet_modal .over1266 {
+   padding: 0 0.6rem;
+}
+
+body header .icon {
+  /*bottom: 1rem;*/
+  display: flex;
+  font-size: 15px;
+  padding: 1.2rem 1rem;
+  /*position: absolute;
+  width: 250px;*/
+  /* margin-top: auto; */
+}
+
+body header .icon img {
+  padding: 0 0.4rem 0 0;
+}
+
+/*
+body header .icon .icon_in {
+  position: relative;
+  width: 250px;
+}
+
+*/
+body header .icon  .account_detail {
+  /*right: 1rem;*/
+  /*position:absolute;*/
+  margin-left: auto;
+}
+
+body main {
+  border-right: 1px solid #38444d;
+  border-left: 1px solid #38444d;
+/*  padding: 0.4rem 0; */
+  width: 600px;
+}
+
+body main .home {
+  width: 100%;
+}
+
+body main .home img.user_icon {
+  padding:0.8rem 0.4rem;
+}
+
+body main .home .sort {
+  border-bottom: 1px solid #38444d;
+  display: flex;
+  padding: 0.8rem 0.4rem;
+  position: relative;
+  /*position:sticky;*/ /* Twitterのsortはスクロールでついてくる */
+}
+
+body main .home .sort .sort_switch {
+  /*top:0.4rem;
+  right: 0.4rem;
+  position: absolute;*/
+  margin-left: auto;
+}
+
+body main .home .sort h2,
+body main .home .sort p {
+  font-size: 19px;
+  line-height: 1.6rem;
+  margin: 0 0.4rem;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+body main .home .tweet img.user_icon {
+  padding-left:0.8rem;
+}
+
+body main .home textarea {
+  background-color: transparent;
+  border-color: transparent;
+  font-size: 19px;
+  outline: none;
+  resize: none;
+  padding-top: 1rem;
+}
+
+body main .home input {
+  /* inline */
+  background-color: #1da1f2;
+  border-color: transparent;
+  border-radius: 20px;
+  color: #fff;
+  font-weight: bold;
+  outline: none;
+  padding: 0.4rem 0.8rem;
+}
+
+body main .home .time_line {
+  border-top: 1px solid #38444d;
+}
+
+body main .home .time_line article {
+  border-top: 1px solid #38444d;
+  padding: 0 0.4rem;
+}
+
+.home .tweet {
+  display: inline-flex;
+  width: 100%;
+}
+
+.tweet .tweet_in {
+  width: calc(100% - 70px);
+}
+
+.tweet .tweet_append {
+  display: inline-flex;
+  position: relative;
+  width: 100%;
+}
+
+.tweet_append ul {
+  border-collapse: separate;
+  border-spacing: 1rem 0;
+  list-style-type: none;
+  padding-inline-start: 0;
+  margin-block-start: 1em;
+  margin-block-end: 0.8em;
+}
+.tweet_append ul li {
+  display: table-cell;
+}
+
+.tweet .tweet_botton {
+  margin: auto 0;
+  /* top: 16px; */
+  /* right: -340px; */
+  /* position: absolute; */
+  margin-left: auto;
+  margin-right: 1rem;
+}
+
+.home .time_line article {
+  display: inline-flex;
+  padding: 0.4rem 0.4rem;
+  width: 580px;
+  /*width: 100%;*/
+}
+
+.time_line article .tweet_info {
+  padding-top:0.4rem;
+  position: relative;
+  /*width: 450px;*/
+  /*width: 506px;*//* ここで実験した */
+}
+
+.time_line article .tweet_info_in {
+  display: flex;
+}
+
+.time_line article .tweet_info .tweet_detail {
+  /*position: absolute;*/
+  margin-left: auto;
+}
+
+.time_line article .tweet_padding {
+  padding-top: 1rem;
+}
+
+.time_line article .tweet_img {
+  /*padding-top: 1rem;*/
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.time_line article .tweet_img img{
+  overflow: hidden;
+}
+/*
+body main .home .time_line article .tweet_react ul {
+  border-collapse: separate;
+  border-spacing: 2rem 0; 最初と最後詰めて、等間隔で並べる方法読んだ気がする 
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  padding-inline-start: 0;
+
+body main .home .time_line article .tweet_react ul li {
+  display: table-cell;
+}
+*/
+
+body main .home .time_line article .tweet_react {
+  display: flex;
+  justify-content: space-between;
+  max-width: 90%;
+  padding: 0.4rem 0;
+}
+
+body main .home .time_line article .tweet_react .react_icon {
+  padding-left: 1rem;
+}
+
+body main .home .time_line article .tweet_react .react_count {
+  padding-left: 1rem;
+}
+
+body aside {
+  margin:0.4rem 1.6rem;
+  width: 350px;
+}
+
+body aside .search,
+body aside .trend,
+body aside .recommend_user {
+  background-color: #192734;
+  border-radius: 16px;
+  /*padding: 0 0.4rem;*/
+}
+
+body aside .search {
+  background-color: #243444;
+}
+
+body aside .search h2,
+body aside .trend h2,
+body aside .recommend_user h2 {
+  padding: 0.8rem 0 0 1rem;
+}
+
+body aside .read_more {
+  color: #1da1f2;
+  font-size:13px;
+}
+
+body aside .search form {
+  display: flex;
+  padding:0.4rem;
+}
+
+.search form .form_icon {
+  padding-left: 0.8rem;
+}
+
+body aside .search form input {
+  background-color: transparent;
+  border-color: transparent;
+  outline: none;
+}
+
+body aside .trend ul,
+body aside .recommend_user ul {
+  padding-left: 0;
+}
+
+body aside .trend ul li,
+body aside .recommend_user ul li {
+  border-top: 1px solid #38444d;
+  display: inline-flex;
+  list-style-type: none;
+  padding: 10px 15px;
+  position: relative;
+  width: 300px;
+  /*width: 100%;*/
+}
+
+body aside .trend ul li a,
+body aside .recommend_user ul li a {
+  align-items: center;
+  color: white;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+body aside .trend ul li .gray a,
+body aside .recommend_user ul li .gray a {
+  color: #8899a6;
+}
+
+body aside .trend ul li div.trend_img {
+  margin-left: auto;
+}
+
+body aside .trend ul li img {
+  border-radius: 12px;
+  margin: 0 10px;
+  /*right: 0px;
+  position: absolute;*/
+}
+
+body aside .recommend_user ul li {
+}
+
+.user_box {
+  display: flex;
+}
+
+.user_box_img {
+  /*margin-right: 10px; */
+  margin: auto 0;
+}
+
+.user_box_info{
+  padding-left: 0.4rem;
+  padding-right: 2.8rem;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+}
+
+body aside .recommend_user ul li .follow {
+  border: 1px solid #1da1f2;
+  border-radius: 9999px;
+  padding: 0.2rem 1.2rem;
+  margin-left: 0.4rem;
+  margin: 1.2rem 0;
+  /*right: 0px;
+  position: absolute; */
+  margin-left: auto;
+}
+
+body aside .recommend_user ul li .follow a {
+  color: #1da1f2;
+  font-weight: bold;
+}
+
+
+body aside .terms {
+  flex-wrap: wrap;
+  padding:0 0.8rem;
+}
+
+body aside .terms section > *{
+  flex-direction: row;
+  }
+
+body aside .terms a {
+  border-collapse: separate;
+  border-spacing: 1rem 0;
+  color: #8899a6;
+  font-size: 13px;
+  list-style-type: none;
+  padding-inline-start: 0;
+  width: 350px;
+}
+body aside .terms a{
+  /*float:left;*/
+  width: 100px;
+}
+h1,
+h2 {
+  font-family: Lato;
+}
