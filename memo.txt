@@ -1,5 +1,11 @@
-
-
+・個人リポジトリをgithub上に、新しいフォルダー/ファイルをVSC上に用意
+・VSC。手元のプロジェクトをGitリポジトリとして初期化
+・VSC。ターミナルを開く
+・$git remote add origin git@github.com:YuiUehara/twitter_replica.git
+・$git branch -M main
+・$git push -u origin main
+・変更をステージ
+・コミット（）
 
 
 CSSの元データを間違って上書きしてしまったときの原因と解決策
