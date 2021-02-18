@@ -24,6 +24,7 @@ body {
   display: flex;
   margin: 0 auto;
   max-width: 1200px;
+  max-height: 100%;
 }
 
 @media (max-width: 988px) {
@@ -191,11 +192,14 @@ body main .home img.user_icon {
 }
 
 body main .home .sort {
+  background-color: #15202b;
   border-bottom: 1px solid #38444d;
   display: flex;
   padding: 0.8rem 0.4rem;
   position: relative;
-  /*position:sticky;*/ /* Twitterのsortはスクロールでついてくる */
+  position:sticky; /* Twitterのsortはスクロールでついてくる */
+  top:0;
+  z-index: 1;
 }
 
 body main .home .sort .sort_switch {
