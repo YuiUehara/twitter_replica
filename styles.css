@@ -32,7 +32,7 @@ body {
   max-width: 100%;
   max-height: 100%;
 }
-@media (max-width: 500px){
+@media (max-width: 499px){
   .over500 {
     display: none;
   }
@@ -110,7 +110,8 @@ body header .menu nav ul {
   padding-left: 0;
 }
 
-body header .menu nav ul li {
+body header .menu nav ul li,
+.home_menu ul li {
   list-style-type: none;
   /* padding:0.6rem 1rem; */
   padding:0.6rem 0;
@@ -123,10 +124,37 @@ body header .menu nav ul li {
   }
 }
 
-body header .menu nav ul li a {
+body header .menu nav ul li a,
+.home_menu ul li a {
   align-items: center;
   color: white;
   font-size: 19px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.home_menu {
+  border-top: 1px solid #38444d;
+  width: 100%;
+}
+
+.home_menu ul {
+  margin: 0;
+  padding: 0 1rem; /* ここ要調整 */
+  text-align: center;
+  width: 100%;
+}
+
+.home_menu ul li {
+  padding: 0 1rem;
+  display: inline-flex; /* inlineではダメだったがinline-flexやinline-blockではokだった理由？ */ 
+}
+}
+
+.home_menu ul li a {
+  align-items: center;
+  color: white;
+  font-size: 30px;
   font-weight: bold;
   text-decoration: none;
 }
@@ -142,6 +170,14 @@ body header .menu nav ul li a .menu_icon{
   body header .menu nav ul li a .menu_icon{
   padding-right: 0;
 }
+}
+
+.home .home_menu_icon {
+  padding: 0 1rem;
+}
+
+.home .home_menu_icon a {
+  font-size: 24px;
 }
 
 body header .menu nav ul li a:hover {
@@ -212,18 +248,25 @@ body main {
   /*  padding: 0.4rem 0; */
   /* width: 600px; */
   width: 60%;
+  width: 100%;
+  width: 600px;
   overflow: scroll;
 }
+
+
+
 
 @media (max-width: 1125px) {
 body main {
   width: 85%;
+  width: 600px;
 }
 }
 
 @media (max-width: 501px) {
 body main {
   width: 100%;
+  width: 990px;
 }
 }
 
@@ -396,11 +439,30 @@ body main .home .time_line article .tweet_react .react_count {
   padding-left: 1rem;
 }
 
+body main .home .home_menu {
+  background-color: #15202b;
+  border-bottom: 1px solid #38444d;
+  display: flex;
+  padding: 0.8rem 0.4rem;
+  padding: 0.4rem 0;
+  position: relative;
+  position: sticky;
+  bottom: 0;
+  z-index: 1;
+}
+
+@media (min-width: 500px) {
+body main .home .home_menu {
+  display: none;
+  }
+}
+
 body aside {
   border-left: 1px solid #38444d;
   /*margin:0.4rem 1.6rem;*/
   /* width: 350px; */
   width: 25%;
+  width: 350px;
   position: sticky;
   top: 0;
 }
