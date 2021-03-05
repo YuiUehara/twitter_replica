@@ -78,6 +78,12 @@ body > * {
   top: 0;
 }
 
+@media (max-width: 500px) {
+.menu_area{
+  display:none;
+}
+}
+
 .menu_in {
   padding:0 1rem;
   /*height: 100%;*/
@@ -451,11 +457,13 @@ body main .home .home_menu {
   z-index: 1;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 501px) {
 body main .home .home_menu {
   display: none;
   }
 }
+
+
 
 body aside {
   border-left: 1px solid #38444d;
